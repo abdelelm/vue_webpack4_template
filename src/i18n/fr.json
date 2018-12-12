@@ -1,0 +1,9 @@
+{
+    "no_connection" : "Vous êtes bien connecté à internet , réesayer plus tard.",
+    "menu" : {
+        "home" : "Acceuil",
+        "aboutus" : "A Propos De Nous",
+        "login" : "Connection",
+        "logout" : "Déconnection"
+    }
+}

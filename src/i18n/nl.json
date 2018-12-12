@@ -1,0 +1,9 @@
+{
+    "no_connection" : "Geen internet verbinden , probeer later.",
+    "menu" : {
+        "home" : "Home",
+        "aboutus" : "Over ons",
+        "login" : "Log In",
+        "logout" : "Log Out"
+    }
+}

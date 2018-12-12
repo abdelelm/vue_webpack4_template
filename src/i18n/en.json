@@ -1,0 +1,9 @@
+{
+    "no_connection" : "No internet connection , please try later",
+    "menu" : {
+        "home" : "Home",
+        "aboutus" : "About Us",
+        "login" : "Log In",
+        "logout" : "Log Out"
+    }
+}
