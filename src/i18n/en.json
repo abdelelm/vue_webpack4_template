@@ -1,9 +1,70 @@
 {
-    "no_connection" : "No internet connection , please try later",
+    "error": {
+        "no_connection": "No internet connection , please check your connectivity",
+        "internal_error": "An internal error occured please try later",
+        "invalidcred" :  "You need to login with your valid creditentials to access the platform "
+
+    },
+    "general": {
+        "cancel" : "cancel",
+        "save" : "save",
+        "weight" : "Weight",
+        "volume" : "Volume",
+        "email": "e-mail",
+        "password": "password",
+        "supermarket": "supermarket",
+        "categories": "categories",
+        "status": "status",
+        "brandname": "brand name",
+        "collectyear": "collect year",
+        "barcode": "bar code",
+        "lockedonly" : "locked only",
+        "search" : "search"
+    },
     "menu" : {
         "home" : "Home",
-        "aboutus" : "About Us",
+        "administration" : "Administration",
+        "products" : "Products",
+        "upload" : "Upload",
         "login" : "Log In",
         "logout" : "Log Out"
+    },
+    "page" : {
+        "products":{
+            "tab" : {
+                "productinformation"  : {
+                    "productname":"Product name",
+                    "countryorigin":"Country of origin",
+                    "labelchoiceslogo":"Label choices logo",
+                    "labelnutriscore":"Label nutriscore",
+                    "packaging":"Packaging",
+                    "portionsize":"Portion size",
+                    "portionunit":"Portion unit",
+                    "portionpackage":"Portion/package",
+                    "packageunit":"Package unit",
+                    "infovisible":"Nutrion info visible",
+                    "remark":"Remark",
+                    "company":"Company",
+                    "nutritionalguidelines":"Daily nutritional guidelines",
+                    "nutriscore":"Nutriscore",
+                    "fullingredientslistvisible":"Full ingredients list visible"
+                }
+            },
+            "information" : "Product Information",
+            "ingredientslist" : "Ingredients List",
+            "nutritionalinfo" : "Nutritional Information"
+        },
+        "login": {
+            "notallowed" :  "You are not allowed to connect , please contact the IT desk",
+            "btnConnect": "LOG IN",
+            "labelmail": "e-mail",
+            "labelpassword": "password"
+        }
+    },
+    "validation" : {
+        "general" : {
+            "valid" : "{0} is not valid",
+            "required" : "{0} is mandatory"
+        }
     }
 }

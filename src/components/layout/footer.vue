@@ -13,7 +13,7 @@
 
       <v-card-text class="white--text">
         <br>
-        &copy;2018 — <strong>{{$store.state.info.name}}</strong>
+        &copy;2018 — <strong>Sciensano | {{$store.state.info.name}} ({{build}})</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -21,8 +21,10 @@
 
 <script>
 export default {
+  name : "vfooter",
 data() { 
 return {
+      build : window.BUILDVERSION,
       icons: []
     }
     }

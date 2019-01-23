@@ -1,40 +1,24 @@
-var currentLanguage = process.env.BUILD_LANGUAGE || "en"
-var languages = {
-	"en": {
-		filename: "en",
-		fallback: null
-	},
-	"fr": {
-		filename: "fr",
-		fallback: "en"
-	},
-	"nl": {
-		filename: "nl",
-		fallback: "en"
-	}
-}
-
-if (!languages[currentLanguage]) {
-	throw new Error("Undefined language: " + currentLanguage)
-}
-
-var language = languages[currentLanguage];
-var fallbackLanguage = languages[language.fallback] || null;
+const language_config = require("./languages");
 var nodeEnv = process.env.NODE_ENV || "development";
-
+if(!process.env.NODE_ENV)
+	process.env.NODE_ENV = nodeEnv;
+	
 module.exports = {
-	language: language,
-	fallbackLanguage: fallbackLanguage,
+	language_key : language_config.main_language_key,
+	translations : language_config.languages,
+	language: language_config.main_language,
+	fallbackLanguage:  language_config.main_fallback,
 	nodeEnv: nodeEnv,
 	PROD: nodeEnv === "production",
-	DEV : nodeEnv === "development" || nodeEnv === "developpment",
-	ssr : false,
-	public_folder : "dist",
+	DEV : nodeEnv === "development",
+	service_worker : true,
+	public_folder : "wwwroot",
 	website : {
-		name : "Vue_webpack4.0",
-		title : "Vue_webpack4.0",
-		description : "Vue_webpack4.0",
-		keywords : "Vue_webpack4.0",
-		favicon : __dirname + "/src/logo.png"
+		name_split : [ "Test" , "Monitoring"],
+		name : "FoodMonitoring",
+        title: "FoodMonitoring",
+		description : "Webapp for food monitoring",
+		keywords : "food , monitoring , scientist",
+		favicon : __dirname + "/src/images/logo.png"
 	}
 }

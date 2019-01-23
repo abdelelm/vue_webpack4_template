@@ -7,17 +7,17 @@
             </v-list-tile-avatar>
             <v-list-tile-content>
               <router-link to="/">
-               <v-toolbar-title><img :src="s('logo.png')" class="icon-brand" /><h4><span class="s">SAN</span><span class="p">EXPRESS</span></h4></v-toolbar-title>
+            
               </router-link>
             </v-list-tile-content>
           </v-list-tile>
         </v-list>
     <v-list class="pt-0" dense>
         <v-divider></v-divider>
-      <v-list-tile v-for="item in menuitems" 
+    <slot name="premenu"></slot>
+      <v-list-tile v-for="item in  itemswithrights()" 
       v-bind:key="item.name"
       router
-      v-if="item.connected == undefined || $store.state.connected == item.connected"
       :active-class="'v-list__tile--active'  + (item.disableactive ? ' disableactive' : '')"
       @click="Close(item)"
       v-bind:to="item.path">
@@ -26,6 +26,8 @@
         </v-list-tile-action>
         <v-list-tile-content>{{$t(item.name)}}</v-list-tile-content>
       </v-list-tile>
+        <hr>
+       <slot name="postmenu"></slot>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -42,7 +44,7 @@
 export default {
   props: {
     menuitems: {
-      default: [],
+      default: () => [],
       type: Array
     },
     title: {
@@ -73,7 +75,9 @@ export default {
     Close(item)
     {
        this.sh = false;
-       this.scrollMeTo(item.anchor)
+    },
+     itemswithrights(){
+        return this.menuitems.filter(x => this.hasRight(x));
     }
   },
   computed: {
@@ -82,7 +86,8 @@ export default {
       if (this.fullwidth) cl += " fullwidth";
 
       return cl;
-    }
+    } ,
+   
   }
 };
 </script>

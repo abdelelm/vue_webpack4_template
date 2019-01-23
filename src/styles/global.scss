@@ -1,16 +1,11 @@
 @import "declarations";
 
-
-.v-content.content {
-    height: 100%;
+a {
+    text-decoration: none; 
 }
-
-.fade-enter-active,
-.fade-leave-active {
-    transition: all 0.2s ease;
+.p {
+    color:$primary;
 }
-
-.fade-enter,
-.fade-leave-active {
-    opacity: 0;
+.s {
+    color:$secondary;
 }

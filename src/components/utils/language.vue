@@ -3,10 +3,9 @@
       <v-btn
         slot="activator"
         class="elevation-0"
-        flat
        
       >
-         <img  v-src="selected.icon" :alt="selected.title" />
+         <img  v-src="selected.icon" :alt="selected.lang" />
       </v-btn>
       <v-list>
         <v-list-tile
@@ -35,11 +34,14 @@ export default {
     },
      methods: {
         selectLang(item){
+
+          console.log(JSON.stringify(item));
           if(item.lang == this.selected.lang)
              return;
-
+           // this.$cookie.set('locale', item.lang)
             this.selected = item;
             this.$i18n.locale = item.lang;
+            this.$i18n.fallbackLocale   = item.fallback;
         }
     }
    

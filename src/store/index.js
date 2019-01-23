@@ -9,11 +9,9 @@ export function createStore() {
 	return new Vuex.Store({
 		strict: config.DEV,
 		state: {
+			user : {},
 			info : config.website,
-			errors : [],
-			loading :0,
-			connected :false,
-			error: null
+			connected :true,
 		},
 		actions,
 		mutations

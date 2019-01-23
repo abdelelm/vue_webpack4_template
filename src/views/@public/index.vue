@@ -1,14 +1,11 @@
 <template>
     <div>
-       main
-	</div>
+        MAIN PAGE
+    </div>
 </template>
 
 <script>
 export default {
- data() {
-     return {}
- }
 }
 </script>
 
