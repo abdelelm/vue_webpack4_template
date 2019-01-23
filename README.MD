@@ -52,5 +52,4 @@ This repository contains a template for VueJs :
    ├── i18n
    ├── app.js
    ├── app.vue
-   ├── app.js
    └── index.template.html
